@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('') {
+    stage('compile') {
       steps {
-        sh './gradlew compileDebugSources'
+        bat './gradlew compileDebugSources'
       }
     }
 
