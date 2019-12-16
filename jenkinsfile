@@ -3,9 +3,12 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat 'fastlane build'
+        bat '{$PATH} build'
       }
     }
 
   }
+   environment {
+      PATH = "C:\\Ruby24-x64\\bin\\fastlane"
+    }
 }
