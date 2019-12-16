@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('build') {
       steps {
-        bat '{$PATH} build'
+        bat 'start cmd.exe /c {$PATH} build'
       }
     }
 
