@@ -1,9 +1,9 @@
 pipeline {
   agent any
   stages {
-    stage('compile') {
+    stage('build') {
       steps {
-        bat './gradlew compileDebugSources'
+        bat 'fastlane build'
       }
     }
 
