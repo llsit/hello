@@ -24,10 +24,12 @@ platform :android do
   desc "Scan Application"
   lane :scan do
     sonar(
-        project_key: "hello",
+        project_key: "hello2",
         project_version: "1.0",
-        project_name: "hello",
-        sources_path: File.expand_path("../AwesomeApp")
+        project_name: "hello2",
+        sonar_sources: "."
+        sonar_url: "http://localhost:9000"
+        sonar_login: "hello2"
     )
   end
 
