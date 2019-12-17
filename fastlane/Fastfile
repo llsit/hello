@@ -21,6 +21,11 @@ platform :android do
     gradle(task: "test")
   end
 
+  desc "Runs Sonarqube"
+  lane :sonarqube do
+    gradle(task: "sonarqube")
+  end
+
   desc "Build Application"
     lane :build do
     gradle(task: 'assemble', build_type: 'Debug')
