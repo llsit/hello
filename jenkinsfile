@@ -3,8 +3,7 @@ pipeline {
   stages {
     stage('scan sonar') {
         steps {
-          bat 'start cmd.exe /c C:\\Gradle\\gradle-5.6.2\\bin\\gradle -D"sonar.projectKey=hello" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=0e32a2f17016d2a0fd14a3e0792c2026d7867b4c"
-'
+          bat 'start cmd.exe /c C:\\Gradle\\gradle-5.6.2\\bin\\gradle -D"sonar.projectKey=hello" -D"sonar.sources=." -D"sonar.host.url=http://localhost:9000" -D"sonar.login=0e32a2f17016d2a0fd14a3e0792c2026d7867b4c"'
         }
     }
     stage('build') {
