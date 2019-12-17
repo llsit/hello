@@ -6,6 +6,19 @@ apply plugin: 'kotlin-android-extensions'
 
 apply plugin: 'kotlin-kapt'
 
+apply plugin: 'org.sonarqube'
+
+sonarqube {
+    properties {
+        property "sonar.projectName", "hello"
+        property "sonar.projectKey", "com.llsit.hello"
+        property "sonar.host.url", "localhost:9000"
+        property "sonar.language", "kotlin"
+        property "sonar.sources", "."
+        property "sonar.login", "f1761f78b22c8f2addd277060e4a6f022f2cf575"
+    }
+}
+
 android {
     compileSdkVersion 29
     buildToolsVersion "29.0.2"
@@ -36,8 +49,5 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
-
-
-
 
 }

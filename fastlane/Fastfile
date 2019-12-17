@@ -21,6 +21,16 @@ platform :android do
     gradle(task: "test")
   end
 
+  desc "Scan Application"
+  lane :scan do
+    sonar(
+        project_key: "hello",
+        project_version: "1.0",
+        project_name: "hello",
+        sources_path: File.expand_path("../AwesomeApp")
+    )
+  end
+
   desc "Build Application"
     lane :build do
     gradle(task: 'assemble', build_type: 'Debug')

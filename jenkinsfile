@@ -1,6 +1,11 @@
 pipeline {
   agent any
   stages {
+    stage('scan sonar') {
+        steps {
+          bat 'start cmd.exe /c C:\\Ruby24-x64\\bin\\fastlane scan'
+        }
+    }
     stage('build') {
       steps {
         bat 'start cmd.exe /c C:\\Ruby24-x64\\bin\\fastlane build'
