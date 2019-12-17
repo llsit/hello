@@ -21,18 +21,6 @@ platform :android do
     gradle(task: "test")
   end
 
-  desc "Scan Application"
-  lane :scan do
-    sonar(
-        project_key: "hello2",
-        project_version: "1.0",
-        project_name: "hello2",
-        sonar_sources: "."
-        sonar_url: "http://localhost:9000"
-        sonar_login: "hello2"
-    )
-  end
-
   desc "Build Application"
     lane :build do
     gradle(task: 'assemble', build_type: 'Debug')

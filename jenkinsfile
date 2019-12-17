@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage('scan sonar') {
         steps {
-          bat 'start cmd.exe /c C:\\Ruby24-x64\\bin\\fastlane scan'
+          bat '.\gradle sonarqube'
         }
     }
     stage('build') {
