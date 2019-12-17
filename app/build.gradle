@@ -10,7 +10,7 @@ apply plugin: 'org.sonarqube'
 
 sonarqube {
     properties {
-        property "sonar.projectName", "claimDi360.Android"
+        property "sonar.projectName", "wow"
         property "sonar.projectKey", "wow"
         property "sonar.host.url", "http://localhost:9000"
         property "sonar.language", "kotlin"
